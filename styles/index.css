@@ -1,0 +1,29 @@
+#app {
+  margin: 70px 200px;
+  border: 1px solid #DDDEE1;
+  padding: 10px; }
+  #app .opera-lis {
+    width: 15%;
+    padding-right: 10px; }
+    #app .opera-lis li {
+      margin: 10px 0;
+      height: 31px;
+      line-height: 31px;
+      padding: 0 10px; }
+    #app .opera-lis li:first-child {
+      margin-top: 5px; }
+    #app .opera-lis li:last-child {
+      margin-bottom: 5px; }
+  #app table {
+    width: 85%;
+    border: none; }
+    #app table thead {
+      border: none; }
+    #app table td {
+      border: 1px solid #DDDEE1; }
+      #app table td span {
+        cursor: pointer; }
+        #app table td span:hover {
+          color: #1D98F9; }
+
+/*# sourceMappingURL=index.css.map */
