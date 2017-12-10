@@ -2,9 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>index</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-$END$
+    <div id="app" class="clearfix">
+        <div class="header clearfix">
+            <div class="header-label pull-left">
+                <h3 class="label">标签</h3>
+            </div>
+            <div class="header-detail pull-right clearfix">
+                <h3 class="regular">正则</h3>
+                <h3 class="doc-type">文档</h3>
+                <h3 class="button">按钮</h3>
+            </div>
+        </div>
+        
+        <ul class="opera-lis pull-left">
+            <li id ="loaner" class="li-EA1E63 ">贷款人</li>
+            <li id ="askforer" class="li-9B27B1 ">借款人</li>
+            <li id ="idcard" class="li-763AB8">身份证</li>
+            <li id ="guarantee" class="highlight li-3F52B5 ">担保人</li>
+            <li id ="amount" class="li-5776FB ">贷款金额</li>
+            <li id ="currency" class="li-03A9F3">币种</li>
+            <li id ="type" class="highlight li-01BCD6">贷款种类</li>
+            <li id ="purpose" class="li-019586">贷款用途</li>
+            <li id ="interest" class="li-259B25">贷款利率</li>
+            <li id ="term" class="li-8CC24A">贷款期限</li>
+            <li id ="startday" class="highlight li-CDDC3A">起始日</li>
+            <li id ="endday" class="li-FEC108">终止日</li>
+            <li id ="penalty" class="li-FF9700">罚息</li>
+            <li id ="signDate" class="li-FF5722">签署日期</li>
+            <li id ="account" class="li-E51C23">账户</li>
+        </ul>
+        
+        <div class="content pull-right">
+            <table class="table">
+                <tbody id="bodyId">
+                <tr>
+                    <td>
+                        <span class="regular">123</span>
+                    </td>
+                    <td>
+                        <span class="doc-type"><%=arr[i].docType%></span>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">是否生效</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="正则">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="文档">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">按钮</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="正则">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="文档">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">按钮</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="正则">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="文档">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">按钮</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="正则">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="文档">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">按钮</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="正则">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="文档">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">按钮</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="正则">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="input-group-form" value="文档">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btn btn-theme">按钮</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    
+            <div class="create">
+                <button class="btn btn-theme" id="create">增加</button>
+            </div>
+        </div>
+    </div><!-- /#app -->
 </body>
 </html>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/template-native.js"></script>
+<script src="js/base.js"></script>
+<script src="scripts/index.js"></script>
+<script id="temp" type="text/html">
+    <%for(var i = 0; i < arr.length; i++){%>
+    <tr>
+        <td>
+            <span class="regular"><%=arr[i].regx%></span>
+        </td>
+        <td>
+            <span class="doc-type"><%=arr[i].docType%></span>
+        </td>
+        <td>
+            <div class="btn btn-theme">是否生效</div>
+        </td>
+    </tr>
+    <%}%>
+</script>

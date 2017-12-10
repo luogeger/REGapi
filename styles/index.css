@@ -2,28 +2,63 @@
   margin: 70px 200px;
   border: 1px solid #DDDEE1;
   padding: 10px; }
+  #app .header {
+    text-align: center; }
+    #app .header .header-label {
+      width: 15%;
+      padding-bottom: 10px; }
+    #app .header .header-detail {
+      width: 85%;
+      padding-bottom: 10px; }
+      #app .header .header-detail h3 {
+        float: left;
+        width: 45%; }
+      #app .header .header-detail h3:last-child {
+        width: 10%; }
   #app .opera-lis {
     width: 15%;
     padding-right: 10px; }
     #app .opera-lis li {
       margin: 10px 0;
-      height: 31px;
-      line-height: 31px;
+      height: 30px;
+      line-height: 30px;
       padding: 0 10px; }
     #app .opera-lis li:first-child {
       margin-top: 5px; }
     #app .opera-lis li:last-child {
       margin-bottom: 5px; }
-  #app table {
-    width: 85%;
-    border: none; }
-    #app table thead {
+  #app .highlight-effect {
+    border-color: #44ABFD;
+    box-shadow: inset 0 1px 2px rgba(29, 152, 248, 0.2), 0 0 0 2px rgba(29, 152, 248, 0.2); }
+  #app .content {
+    width: 85%; }
+    #app .content table {
+      width: 100%;
       border: none; }
-    #app table td {
-      border: 1px solid #DDDEE1; }
-      #app table td span {
-        cursor: pointer; }
-        #app table td span:hover {
-          color: #1D98F9; }
+      #app .content table thead {
+        border: none; }
+      #app .content table tr {
+        border: none; }
+        #app .content table tr td {
+          width: 45%; }
+          #app .content table tr td .input-group {
+            width: 80%; }
+            #app .content table tr td .input-group input {
+              text-align: center;
+              display: block;
+              width: 100%;
+              border-radius: 4px; }
+          #app .content table tr td span {
+            cursor: pointer; }
+            #app .content table tr td span:hover {
+              color: #1D98F9; }
+        #app .content table tr td:last-child {
+          width: 10%; }
+    #app .content .create {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center; }
+      #app .content .create .btn {
+        width: 300px; }
 
 /*# sourceMappingURL=index.css.map */

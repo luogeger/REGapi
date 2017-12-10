@@ -1,5 +1,4 @@
 console.log('xiaoi');
-var contextPath = $.fn.getRootPath();
 
 
 //  页面加载
