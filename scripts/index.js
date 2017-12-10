@@ -57,27 +57,61 @@ $('.opera-lis li').each(function (index, item){
 
 // 增加
 $('#create').click(function (){
-    var html =
-    '<tr>'+
-    '<td>'+
-    '<div class="input-group">'+
-    '<input type="text" class="input-group-form" value="">'+
-    '</div>'+
-    '</td>'+
-    '<td>'+
-    '<div class="input-group">'+
-    '<input type="text" class="input-group-form" value="">'+
-    '</div>'+
-    '</td>'+
-    '<td>'+
-    '<div class="btn btn-theme">按钮</div>'+
-    '</td>'+
-    '</tr>';
-
-
-    $('#bodyId').append(html).find('tr:last-child td:first-child input').focus();
+    $('#maskLayer').css('transform', 'scale(1)')
 })
 
+
+// #maskLayer
+$('.create-wrap').click(function (e){ e.stopPropagation()})// 阻止冒泡
+$('#maskLayer').click(function (){
+    $(this).css('transform', 'scale(0)')
+})
+
+$('#maskLayer div:last-child>input').keyup(function () {
+    var regVal = $('#maskLayer div:first-child>input').val()
+    var docVal = $('#maskLayer div:last-child>input').val()
+    var nameVal ;
+
+
+    $('.opera-lis li').each(function (index, item){
+        if ($(item).hasClass('highlight-effect')){
+            nameVal = $(item).text()
+        }
+    })
+
+    var data = {
+        name: nameVal,
+        regx: regVal,
+        docType: docVal,
+        status: 'on',
+        desc: '无'
+    };
+    if(event.keyCode == 13){
+        if (regVal == ''){
+            alert('添加失败');
+        }else{
+            console.log(data);
+            $.post('http://172.16.8.36:8888/regex/add', data, function (data){
+                console.log(data, 'msg');
+            })
+            // $.ajax({
+            //     type: 'post',
+            //     url: 'http://172.16.8.36:8888/regex/add',
+            //     data: data,
+            //     success: function(data){
+            //         var data = data;
+            //         $('#maskLayer').css('transform', 'scale(0)')
+            //
+            //     },
+            //     error: function(data){
+            //         console.log(data.status);
+            //
+            //     },
+            //
+            // });
+        }
+    }
+})
 
 
 // 修改
@@ -89,10 +123,9 @@ $('#bodyId').on('dblclick', '.regular, .doc-type', function (){
 
 // blur 事件
 $('#bodyId').on('blur', 'input', function (){
-    var val = $(this).val();
+    var val = $(this).val()
     $(this).parent('.input-group').siblings('span').text(val)
     $(this).parent('.input-group').remove();
-
 })
 
 // Enter 事件

@@ -54,11 +54,38 @@
               color: #1D98F9; }
         #app .content table tr td:last-child {
           width: 10%; }
-    #app .content .create {
-      width: 100%;
-      padding: 20px 0;
+    #app .content .create-btn {
+      padding: 50px;
       text-align: center; }
-      #app .content .create .btn {
+      #app .content .create-btn .btn {
         width: 300px; }
+
+#maskLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: .4s; }
+  #maskLayer .create-wrap {
+    padding: 50px 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    border-radius: 4px;
+    background-color: rgba(29, 152, 249, 0.5); }
+    #maskLayer .create-wrap .input-group {
+      width: 25%; }
+      #maskLayer .create-wrap .input-group input {
+        width: 100%;
+        border-radius: 4px;
+        text-align: center; }
+    #maskLayer .create-wrap .input-group:first-child {
+      margin-right: 10%; }
 
 /*# sourceMappingURL=index.css.map */
