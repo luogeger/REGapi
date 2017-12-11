@@ -105,8 +105,8 @@
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, .5);
-  transform: scale(0);
-  transform-origin: bottom center;
+  //transform: scale(0);
+  transform-origin: center bottom;
   transition: .4s;
   .create-wrap{
     padding: 50px 100px;
