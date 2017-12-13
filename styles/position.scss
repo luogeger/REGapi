@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+
+#wrapper{
+$width: 180px;
+$height: 60px;
+  #header,
+  #side,
+  #main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 1px solid #1D98F9;
+  }
+
+  #header{
+    //width: calc(100% - 180px);
+    height: 60px;
+    left: 180px;
+    right: 17px;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  #side{
+    width: $width;
+    z-index: 1;
+  }
+
+  #main{
+    width: 100%;
+    padding: 70px 0 0 190px;
+    background-color: #fff;
+    overflow: auto;
+  }
+
+
+}
